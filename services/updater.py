@@ -68,6 +68,6 @@ def check_for_updates(timeout: float = 8.0) -> Dict[str, str]:
             "release_notes": "",
             "download_url": "",
             "message": ("Update information is not available right now "
-                        f"({exc.__class__.__name__}). The update channel will "
+                        ". The update channel will "
                         "be activated in a future release."),
         }
