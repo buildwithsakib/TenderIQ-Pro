@@ -26,5 +26,5 @@ CONTACT_PHONE = "+91-9921989670"
 # The update checker (wired during backend integration) compares APP_VERSION
 # against the latest version published at UPDATE_FEED_URL. The endpoint is a
 # placeholder by design; point it at a real releases.json before shipping.
-UPDATE_FEED_URL = "https://example.com/tenderiq/releases.json"
-RELEASE_NOTES_URL = "https://example.com/tenderiq/release-notes"
+UPDATE_FEED_URL = "https://github.com/buildwithsakib"
+RELEASE_NOTES_URL = "https://github.com/buildwithsakib"
