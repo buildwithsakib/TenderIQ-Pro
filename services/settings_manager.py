@@ -20,7 +20,7 @@ CONFIG_FILE = os.path.join(project_root(), "config.json")
 DEFAULT_CONFIG = {
     # ---- Backend keys (consumed by core/) --------------------------------
     "gem_url": "https://bidplus.gem.gov.in/all-bids",
-    "search_keyword": "Manpower",
+    "search_keyword": "Pune",
     "allowed_item_category": "Manpower",
     "mse_relaxation": "Yes",
     "allowed_states": ["Maharashtra", "Not Applicable"],
