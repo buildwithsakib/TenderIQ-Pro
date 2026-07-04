@@ -43,7 +43,17 @@ A tender appears in the final Excel report **only if all three conditions are me
 These values can be changed under **Settings** in the desktop app or directly in `config.json`.
 
 ---
+## Output Report Format
 
+Matched tenders are exported to an Excel file (`matched_tenders.xlsx`) with the following columns:
+
+| Sr No | Bid Number         | Dated      | Bid End Date        | Contract Period    | Address                               | Eligible |
+|------:|--------------------|------------|---------------------|--------------------|---------------------------------------|----------|
+| 1     | GEM/2026/B/7647239 | 02-07-2026 | 13-07-2026 17:00:00 | 1 Year(s) 1 Day(s) | Director,Government Department,Mumbai | Yes      |
+| 2     | GEM/2026/B/7647512 | 03-07-2026 | 14-07-2026 18:00:00 | 2 Year(s)          | Municipal Corporation, Pune           | Yes      |
+| 3     | GEM/2026/B/7647824 | 04-07-2026 | 15-07-2026 16:30:00 | 6 Month(s)         | Public Works Department, Nagpur       | Yes      |
+
+> **Note:** The above records are sample data for demonstration purposes only. Actual results depend on the bids available on the GeM portal and your configured matching criteria.
 ---
 
 ## Installation
