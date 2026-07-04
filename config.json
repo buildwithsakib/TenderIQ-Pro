@@ -1,6 +1,6 @@
 {
     "gem_url": "https://bidplus.gem.gov.in/all-bids",
-    "search_keyword": "Manpower",
+    "search_keyword": "Pune",
     "allowed_item_category": "Manpower",
     "mse_relaxation": "Yes",
     "allowed_states": [
@@ -15,9 +15,9 @@
     "headless": false,
     "page_load_timeout_ms": 60000,
     "download_timeout_ms": 60000,
-    "max_bids_to_process": 0,
+    "max_bids_to_process": 10,
     "navigation_retry_count": 3,
-    "browser_slow_mo_ms": 0,
+    "browser_slow_mo_ms": 200,
     "mse_filter_mode": "Yes",
     "required_experience_years": 0,
     "required_turnover_lakhs": 0.0,
