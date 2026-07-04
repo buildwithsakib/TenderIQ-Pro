@@ -48,13 +48,9 @@ These values can be changed under **Settings** in the desktop app or directly in
 
 ## Installation
 
-python -m venv venv  
+**open cmd in current directory** 
 
-venv\Scripts\activate
-
-pip install -r requirements.txt
-
-pip install pyinstaller
+setup.bat
 
 ---
 
