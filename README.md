@@ -16,8 +16,8 @@ A headless `main.py` script is also included for server/automation use.
 ## Features
 
 - 🖥️ **Desktop Application** – Built with PySide6, featuring a dashboard, history, settings, and theme support (light/dark).
-- 🔍 **One‑Click Scanning** – Enter a keyword (default: `manpower`), set the maximum number of bids, and let the app do the rest.
-- 📄 **PDF Parsing** – Automatically extracts Bid Number, Dated, Bid End Date, Item Category, MSE Relaxation, and States/UT from downloaded GeM bid documents.
+- 🔍 **Automated Tender Scanning** – Searches GeM for a user-defined keyword, downloads tender PDFs, validates them against configurable rules, and processes them automatically.
+- 📄 **PDF Data Extraction** – Automatically extracts Bid Number, Dates, Contract Period, Address, Item Category, MSE Relaxation, and other required information from GeM tender PDFs.
 - ✅ **Smart Filtering** – Three configurable rules decide if a tender qualifies (item category, MSE relaxation, allowed states).
 - 📊 **Excel Export** – Only matched tenders are written to `output/matched_tenders.xlsx`.
 - 🧹 **Automatic Cleanup** – Downloaded PDFs are deleted after processing to keep the workspace clean.
@@ -27,6 +27,27 @@ A headless `main.py` script is also included for server/automation use.
 - 📝 **Detailed Logging** – Every action is logged to the console and to `logs/scanner.log`.
 - 🆙 **Built‑in Updater** – Checks for new releases on GitHub and can download updates.
 - 🧰 **Headless Mode** – Run the scanner without the UI using `python main.py` (ideal for scheduled tasks).
+
+---
+
+---
+
+## Screenshots
+
+<p align="center">
+  <img src="screenshots/dashboard.png" width="48%" alt="Dashboard"/>
+  <img src="screenshots/settings.png" width="48%" alt="Settings"/>
+</p>
+
+<p align="center">
+  <img src="screenshots/history.png" width="48%" alt="History"/>
+  <img src="screenshots/help.png" width="48%" alt="Help"/>
+</p>
+
+<p align="center">
+  <img src="screenshots/about.png" width="48%" alt="About"/>
+  <img src="screenshots/welcome.png" width="48%" alt="Welcome"/>
+</p>
 
 ---
 
@@ -58,10 +79,23 @@ Matched tenders are exported to an Excel file (`matched_tenders.xlsx`) with the 
 
 ## Installation
 
-**open cmd in current directory** 
+1. Clone the repository:
 
+```bash
+git clone https://github.com/yourusername/TenderIQ-Pro.git
+cd TenderIQ-Pro
+```
+
+2. Run the setup script:
+
+```bash
 setup.bat
+```
 
+The script automatically:
+- Creates a virtual environment
+- Installs all required dependencies
+- Installs Playwright browsers
 ---
 
 ### Prerequisites
@@ -69,5 +103,15 @@ setup.bat
 - Python **3.10** or later
 - Internet connection (GeM portal must be reachable)
 - Windows, macOS, or Linux with a graphical environment (the desktop app requires a display; headless mode does not)
+
+---
+## Built With
+
+- Python 3.10+
+- PySide6
+- Playwright
+- SQLite
+- OpenPyXL
+- pdfplumber
 
 ---
