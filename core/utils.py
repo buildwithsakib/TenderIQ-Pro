@@ -13,7 +13,6 @@ Responsibilities:
 import json
 import os
 import time
-import sys
 
 from core.logger import get_logger
 
@@ -24,13 +23,8 @@ def load_config(config_path: str = "config.json") -> dict:
     """
     Load and parse the JSON configuration file.
 
-    When running as a PyInstaller bundle (sys.frozen is True), the
-    function automatically looks for config.json next to the .exe
-    if the default path is used.
-
     Args:
-        config_path: Path to config.json. If not provided, defaults to
-                     'config.json' (relative to cwd or exe folder).
+        config_path: Path to config.json (relative to project root by default).
 
     Returns:
         A dictionary containing the configuration values.
@@ -39,15 +33,6 @@ def load_config(config_path: str = "config.json") -> dict:
         FileNotFoundError: If the config file does not exist.
         json.JSONDecodeError: If the config file is not valid JSON.
     """
-    # --- Modification for PyInstaller ---
-    if getattr(sys, 'frozen', False):
-        # Running as compiled .exe – look next to the executable
-        base_dir = os.path.dirname(sys.executable)
-        # Only override if the user didn't provide an absolute path
-        if not os.path.isabs(config_path):
-            config_path = os.path.join(base_dir, config_path)
-    # ------------------------------------
-
     if not os.path.isfile(config_path):
         logger.error("Configuration file not found at '%s'.", config_path)
         raise FileNotFoundError(f"Configuration file not found: {config_path}")
