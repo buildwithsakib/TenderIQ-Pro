@@ -6,9 +6,7 @@ Handles sort selection (fully automatic), search, bid listing parsing,
 PDF download, and pagination.
 """
 
-import shutil
 import os
-import sys
 import time
 from dataclasses import dataclass
 from typing import List, Optional
@@ -85,42 +83,12 @@ class GemBrowser:
         self.close()
 
     def start(self):
-        # --------------------- ADDED LINES ---------------------
-        # Set the PLAYWRIGHT_BROWSERS_PATH so that Playwright finds
-        # the bundled Chromium (local "browsers" folder)
-        if getattr(sys, 'frozen', False):
-            # Running as compiled .exe (PyInstaller)
-            os.environ['PLAYWRIGHT_BROWSERS_PATH'] = os.path.join(sys._MEIPASS, 'browsers')
-        else:
-            # Running from source (development)
-            os.environ['PLAYWRIGHT_BROWSERS_PATH'] = os.path.join(os.path.dirname(__file__), '..', 'browsers')
-        # -------------------------------------------------------
-
         os.makedirs(self.download_dir, exist_ok=True)
         logger.info("Launching Chromium browser (headless=%s)...", self.headless)
         self._playwright = sync_playwright().start()
-
-        chrome_path = (
-            shutil.which("chrome")
-            or shutil.which("msedge")
-            or shutil.which("brave")
+        self.browser = self._playwright.chromium.launch(
+            headless=self.headless, slow_mo=self.slow_mo_ms
         )
-
-        if chrome_path:
-            logger.info("Using system browser: %s", chrome_path)
-            self.browser = self._playwright.chromium.launch(
-                executable_path=chrome_path,
-                headless=self.headless,
-                slow_mo=self.slow_mo_ms,
-            )
-        else:
-            logger.info("Using bundled Playwright Chromium.")
-            self.browser = self._playwright.chromium.launch(
-                headless=self.headless,
-                slow_mo=self.slow_mo_ms,
-            )
-
-        # Create browser context
         self.context = self.browser.new_context(accept_downloads=True)
         self.context.set_default_timeout(self.page_load_timeout_ms)
         self.page = self.context.new_page()
