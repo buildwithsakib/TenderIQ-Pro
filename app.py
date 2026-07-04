@@ -41,6 +41,5 @@ def main() -> int:
     window.show_first_run_guide_if_needed()
     return app.exec()
 
-
 if __name__ == "__main__":
     sys.exit(main())
