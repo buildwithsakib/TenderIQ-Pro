@@ -10,8 +10,7 @@ scanner backend (core/). Run with:
 """
 
 import sys
-import os
-os.environ["PLAYWRIGHT_BROWSERS_PATH"] = "0"
+
 from PySide6.QtGui import QFont, QIcon
 from PySide6.QtWidgets import QApplication
 
