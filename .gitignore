@@ -1,0 +1,25 @@
+# ---- Python ----
+__pycache__/
+*.py[cod]
+*.egg-info/
+venv/
+.venv/
+
+# ---- Runtime data (auto-created by the scanner) ----
+logs/
+downloads/
+output/
+processed_bids.json
+database/*.db
+database/*.sqlite3
+
+# ---- Build artifacts (PyInstaller / installer) ----
+build/
+dist/
+*.exe
+
+# ---- IDE / OS ----
+.vscode/
+.idea/
+Thumbs.db
+.DS_Store
