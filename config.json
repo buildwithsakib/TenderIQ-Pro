@@ -1,0 +1,31 @@
+{
+    "gem_url": "https://bidplus.gem.gov.in/all-bids",
+    "search_keyword": "Manpower",
+    "allowed_item_category": "Manpower",
+    "mse_relaxation": "Yes",
+    "allowed_states": [
+        "Maharashtra",
+        "Not Applicable"
+    ],
+    "download_dir": "downloads",
+    "output_dir": "output",
+    "output_file": "matched_tenders.xlsx",
+    "log_dir": "logs",
+    "log_file": "scanner.log",
+    "headless": false,
+    "page_load_timeout_ms": 60000,
+    "download_timeout_ms": 60000,
+    "max_bids_to_process": 0,
+    "navigation_retry_count": 3,
+    "browser_slow_mo_ms": 0,
+    "mse_filter_mode": "Yes",
+    "required_experience_years": 0,
+    "required_turnover_lakhs": 0.0,
+    "min_action_delay_s": 1.5,
+    "max_action_delay_s": 3.0,
+    "restart_browser_after_bids": 0,
+    "skip_duplicates": true,
+    "delete_pdf_after_processing": true,
+    "ui_theme": "dark",
+    "first_run_completed": true
+}
