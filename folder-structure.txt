@@ -1,0 +1,97 @@
+ tenderiq-pro-main/
+│   .gitignore
+│   app.py
+│   CHANGELOG.md
+│   config.json
+│   LICENSE
+│   main.py
+│   main.spec
+│   processed_bids.json
+│   README.md
+│   requirements.txt
+│   setup.bat
+│   TenderIQPro.spec.txt
+│   version.py
+│
+├───assets
+│   └───icons
+│           about.svg
+│           dashboard.svg
+│           excel.svg
+│           folder.svg
+│           help.svg
+│           history.svg
+│           logo.svg
+│           reset.svg
+│           settings.svg
+│           start.svg
+│           stop.svg
+│           theme.svg
+│
+├───core
+│       browser.py
+│       downloader.py
+│       excel_writer.py
+│       logger.py
+│       matcher.py
+│       pdf_reader.py
+│       processed_bids.py
+│       utils.py
+│       __init__.py
+│
+├───database
+│       .gitkeep
+│       history.db
+│       history_db.py
+│       __init__.py
+│
+├───docs
+│       INTEGRATION_PLAN.md
+│
+├───downloads
+├───logs
+│       scanner.log
+│
+├───output
+│       matched_tenders.xlsx
+│
+├───resources
+│       .gitkeep
+│
+├───services
+│       extra_filters.py
+│       qt_log_handler.py
+│       scan_worker.py
+│       settings_manager.py
+│       updater.py
+│       __init__.py
+│
+├───styles
+│       dark.qss
+│       light.qss
+│       theme.py
+│
+└───ui
+    │   main_window.py
+    │   paths.py
+    │   __init__.py
+    │
+    ├───dialogs
+    │      update_dialog.py
+    │      welcome_dialog.py
+    │      __init__.py
+    │   
+    │
+    ├───pages
+    │       about_page.py
+    │       dashboard_page.py
+    │       help_page.py
+    │       history_page.py
+    │       settings_page.py
+    │       __init__.py
+    │
+    └───widgets
+           card.py
+           sidebar.py
+           stat_card.py
+           __init__.py
