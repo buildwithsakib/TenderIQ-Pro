@@ -82,7 +82,7 @@ Matched tenders are exported to an Excel file (`matched_tenders.xlsx`) with the 
 1. Clone the repository:
 
 ```bash
-git clone https://github.com/yourusername/TenderIQ-Pro.git
+git clone https://github.com/buildwithsakib/TenderIQ-Pro.git
 cd TenderIQ-Pro
 ```
 
