@@ -45,65 +45,115 @@ These values can be changed under **Settings** in the desktop app or directly in
 ---
 
 ## Folder Structure
+folder structure : 
 tenderiq-pro-main/
-├── app.py # Desktop application entry point (PySide6)
-├── main.py # Headless scanner entry point
-├── config.json # Core configuration (search keyword, rules, timeouts)
-├── processed_bids.json # Tracks already-processed bid numbers
-├── version.py # Current version info
-├── requirements.txt # Python dependencies
-├── setup.bat # One-command environment setup (Windows)
-├── TenderIQPro.spec.txt # PyInstaller build specification
-├── assets/
-│ └── icons/ # SVG icons for the sidebar and dialogs
-├── core/ # Core scanning and processing logic
-│ ├── browser.py # Playwright automation (search, listing, PDF download)
-│ ├── downloader.py # PDF download waiter
-│ ├── pdf_reader.py # PDF text extraction and field parsing
-│ ├── matcher.py # Validation rule engine
-│ ├── excel_writer.py # Excel report generation
-│ ├── logger.py # Logging setup
-│ ├── processed_bids.py # Duplicate bid tracking
-│ └── utils.py # Helpers (config loader, cleanup)
-├── database/
-│ ├── history.db # SQLite database for scan history
-│ └── history_db.py # Database interface
-├── downloads/ # Temporary folder for downloaded PDFs (auto-cleaned)
-├── logs/
-│ └── scanner.log # Full execution log
-├── output/
-│ └── matched_tenders.xlsx # Final report (overwritten on each scan)
-├── services/ # Background services and helpers
-│ ├── extra_filters.py # Additional bid filtering logic
-│ ├── qt_log_handler.py # Log handler for the Qt UI
-│ ├── scan_worker.py # Worker thread that runs the scan asynchronously
-│ ├── settings_manager.py # Reads/writes application settings
-│ └── updater.py # GitHub release check and update downloader
-├── styles/
-│ ├── dark.qss # Dark theme stylesheet
-│ ├── light.qss # Light theme stylesheet
-│ └── theme.py # Theme management
-└── ui/
-├── main_window.py # Main application window
-├── paths.py # Path resolution utilities
-├── dialogs/
-│ ├── update_dialog.py # Update notification dialog
-│ └── welcome_dialog.py # First‑run welcome screen
-├── pages/
-│ ├── dashboard_page.py # Scan controls and live log
-│ ├── history_page.py # Past scan results viewer
-│ ├── settings_page.py # Configuration editor
-│ ├── help_page.py # Usage guide
-│ └── about_page.py # About TenderIQ Pro
-└── widgets/
-├── card.py # Reusable card widget
-├── sidebar.py # Navigation sidebar
-└── stat_card.py # Statistic display card
-
+│   .gitignore
+│   app.py
+│   CHANGELOG.md
+│   config.json
+│   LICENSE
+│   main.py
+│   main.spec
+│   processed_bids.json
+│   README.md
+│   requirements.txt
+│   setup.bat
+│   TenderIQPro.spec.txt
+│   version.py
+│
+├───assets
+│   └───icons
+│           about.svg
+│           dashboard.svg
+│           excel.svg
+│           folder.svg
+│           help.svg
+│           history.svg
+│           logo.svg
+│           reset.svg
+│           settings.svg
+│           start.svg
+│           stop.svg
+│           theme.svg
+│
+├───core
+│       browser.py
+│       downloader.py
+│       excel_writer.py
+│       logger.py
+│       matcher.py
+│       pdf_reader.py
+│       processed_bids.py
+│       utils.py
+│       __init__.py
+│
+├───database
+│       .gitkeep
+│       history.db
+│       history_db.py
+│       __init__.py
+│
+├───docs
+│       INTEGRATION_PLAN.md
+│
+├───downloads
+├───logs
+│       scanner.log
+│
+├───output
+│       matched_tenders.xlsx
+│
+├───resources
+│       .gitkeep
+│
+├───services
+│       extra_filters.py
+│       qt_log_handler.py
+│       scan_worker.py
+│       settings_manager.py
+│       updater.py
+│       __init__.py
+│
+├───styles
+│       dark.qss
+│       light.qss
+│       theme.py
+│
+└───ui
+    │   main_window.py
+    │   paths.py
+    │   __init__.py
+    │
+    ├───dialogs
+    │      update_dialog.py
+    │      welcome_dialog.py
+    │      __init__.py
+    │   
+    │
+    ├───pages
+    │       about_page.py
+    │       dashboard_page.py
+    │       help_page.py
+    │       history_page.py
+    │       settings_page.py
+    │       __init__.py
+    │
+    └───widgets
+           card.py
+           sidebar.py
+           stat_card.py
+           __init__.py
 
 ---
 
 ## Installation
+
+python -m venv venv  
+venv\Scripts\activate
+pip install -r requirements.txt
+pip install pyinstaller
+
+---
 
 ### Prerequisites
 
