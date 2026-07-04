@@ -1,16 +1,15 @@
- tenderiq-pro-main/
+tenderiq-pro-main/
 │   .gitignore
 │   app.py
 │   CHANGELOG.md
 │   config.json
 │   LICENSE
 │   main.py
-│   main.spec
 │   processed_bids.json
 │   README.md
 │   requirements.txt
+│   folder-structure.txt
 │   setup.bat
-│   TenderIQPro.spec.txt
 │   version.py
 │
 ├───assets
@@ -77,10 +76,9 @@
     │   __init__.py
     │
     ├───dialogs
-    │      update_dialog.py
-    │      welcome_dialog.py
-    │      __init__.py
-    │   
+    │       update_dialog.py
+    │       welcome_dialog.py
+    │       __init__.py
     │
     ├───pages
     │       about_page.py
@@ -91,7 +89,7 @@
     │       __init__.py
     │
     └───widgets
-           card.py
-           sidebar.py
-           stat_card.py
-           __init__.py
+            card.py
+            sidebar.py
+            stat_card.py
+            __init__.py
