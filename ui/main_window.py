@@ -199,7 +199,6 @@ class MainWindow(QMainWindow):
     # ------------------------------------------------------------------
     def _on_theme_toggled(self):
         self._settings.set("ui_theme", self._theme.toggle())
-
     def _on_settings_saved(self, config: dict):
         theme = config.get("ui_theme", self._theme.current)
         if theme != self._theme.current:
