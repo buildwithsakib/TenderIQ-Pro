@@ -36,7 +36,7 @@ A headless `main.py` script is also included for server/automation use.
 
 <p align="center">
   <img src="screenshots/dashboard.png" width="48%" alt="Dashboard"/>
-  <img src="screenshots/settings.png" width="48%" alt="Settings"/>
+  <img src="screenshots/setting.png" width="48%" alt="Settings"/>
 </p>
 
 <p align="center">
@@ -44,9 +44,10 @@ A headless `main.py` script is also included for server/automation use.
   <img src="screenshots/help.png" width="48%" alt="Help"/>
 </p>
 
+
 <p align="center">
   <img src="screenshots/about.png" width="48%" alt="About"/>
-  <img src="screenshots/welcome.png" width="48%" alt="Welcome"/>
+  <!-- <img src="screenshots/welcome.png" width="48%" alt="Welcome"/> -->
 </p>
 
 ---
