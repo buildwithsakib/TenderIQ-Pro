@@ -87,10 +87,15 @@ git clone https://github.com/buildwithsakib/TenderIQ-Pro.git
 cd TenderIQ-Pro
 ```
 
-2. Run the setup script:
+2. a)Run the setup script (This is for Windows):
 
 ```bash
 setup.bat
+```
+  b) (For Mac Users) :
+
+```bash
+setup.sh
 ```
 
 The script automatically:
